@@ -4,11 +4,12 @@ import { UserRepository } from "../repositories/UserRepository"
 interface IUserRequest {
     name: string,
     email: string,
-    admin: boolean
+    password: string,
+    admin?: boolean
 }
 
 class CreateUserService {
-    async execute({ name, email, admin }: IUserRequest) {
+    async execute({ name, email, password, admin }: IUserRequest) {
         if (!email) {
             throw new Error("Email incorrect");
         }
@@ -19,7 +20,7 @@ class CreateUserService {
             throw new Error("User already exists");
         }
 
-        const user = userRepository.create({ name, email, admin });
+        const user = userRepository.create({ name, email, password, admin });
 
         await userRepository.save(user);
 
