@@ -67,7 +67,7 @@ docker-compose up
 - [ ] Refact to Clean Architecture
 - [ ] Change SQLite database to MySQL
 - [ ] Add search tag by name
-- [ ] Add search tag by name
+- [ ] Add search tag by user
 - [ ] Improve logs (sentry)
 
 ## License
