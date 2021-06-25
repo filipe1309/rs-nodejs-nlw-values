@@ -22,11 +22,6 @@ class CreateComplimentService {
             throw new Error("User Receiver does not exists!");
         }
 
-        const userSenderExists = await userRepository.findOne(user_sender);
-        if (!userSenderExists) {
-            throw new Error("User Sender does not exists!");
-        }
-
         const tagRepository = getCustomRepository(TagRepository);
         const tagExists = await tagRepository.findOne(tag_id);
         if (!tagExists) {
