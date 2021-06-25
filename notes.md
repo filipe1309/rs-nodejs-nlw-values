@@ -210,3 +210,29 @@ Response Error
   "error": "User Receiver does not exists!"
 }
 ```
+
+## CLASS-5
+
+POST http://localhost:3000/compliments
+
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE2MjQ1ODQ2OTYsImV4cCI6MTYyNDY3MTA5Niwic3ViIjoiMzdiOGRjMWItNzFjYi00OWMwLTkwMjUtZmQ0MjRmM2Q1OWQwIn0.bZEflfC6GSzwSh_I3aCv1xfspo07Nl5NqxJoFYZOZ2A
+
+```json
+{
+  "tag_id": "6fb8f3f5-7c3f-45b8-b6e2-a5d080a78ff2",
+  "user_receiver": "3c693420-1b54-43d9-b243-de8eacf9b619",
+  "message": "Thanks =)"
+}
+```
+
+POST http://localhost:3000/user/compliments/send
+
+POST http://localhost:3000/user/compliments/receive
+
+POST http://localhost:3000/tags
+
+```sh
+yarn add class-transformer
+yarn add cors
+yarn add @types/cors -D
+```
