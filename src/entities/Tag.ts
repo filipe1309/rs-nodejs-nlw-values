@@ -1,3 +1,4 @@
+import { Expose } from "class-transformer";
 import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
 import { v4 as uuid } from "uuid";
 
@@ -9,6 +10,11 @@ class Tag {
 
     @Column()
     name: string;
+
+    @Expose({name: "name_custom"})
+    nameCustom(): string {
+        return `#${this.name.replace(/ /g, "-").toLowerCase()}`;
+    }
 
     @CreateDateColumn()
     created_at: Date;
