@@ -24,9 +24,9 @@ This project was developed following NLW's Together [Node.js](https://nextlevelw
 
 #### 👏 Register Compliments
 
-- [ ] You can't register a compliment to yourself
-- [ ] You can't register a compliment to an invalid user
-- [ ] You must be logged in to register a compliment
+- [x] You can't register a compliment to yourself
+- [x] You can't register a compliment to an invalid user
+- [x] You must be logged in to register a compliment
 
 ## :computer: Technologies
 
@@ -56,6 +56,18 @@ docker-compose up
 ```
 
 > Access http://localhost:3000
+
+## 📃 TODO
+
+- [ ] Add custom error handles
+- [ ] Send compliment email to user receiver
+- [ ] Deploy (heroku)
+- [ ] Add Frontend
+- [ ] Refact to Clean Architecture
+- [ ] Change database SQLite to MySQL
+- [ ] Add search tag by name
+- [ ] Add search tag by name
+- [ ] Improve logs (sentry)
 
 ## License
 
